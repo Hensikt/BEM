@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.body {
+    font-family: sans-serif;
+    background-color: dodgerblue;
+    margin: 0;
+    padding: 0;}
+
+.wrapper {
+    background-color: rgba(255, 255, 255, .7);
+    background-image: url('../img/transp.png'), url('../img/grid.png');
+    overflow: auto;
+    width: 1240px;
+    margin: 0 auto;
+    /* Als je een element met een beperkte breedte zoals dit div-element met de class wrapper
+    wil centreren dan geef je hem en marge 0 auto: vertikaal niets maar horizontaal auto.
+    Dus de linkermarge is auto en de rechtermarge ook. Het element staat dan in het midden.
+    Contrleer maar door het browservenster van breedte te laten veranderen.
+    */}
+    .wrapper__header{
+        background-color: rgba(0, 0, 0, .7);
+        color: #fff;}
+    .wrapper__auteur {
+        float: right;
+        text-align: right;
+        margin-right: 42px;}
+    .wrapper__tagline {
+        margin-left: 50px;}
+    .wrapper__title{
+        margin-top: 0;
+        padding-top: 20px;
+        margin-left: 45px;}
+
+.inhoud{
+    padding: 20px;
+    height: 500px;}
+    .inhoud__block{
+        background-color: rgba(30, 200, 240, 0.5);
+        width: 360px;
+        /* door de breedte in te perken zouden er wel 3 sections in het main-element
+        naast elkaar passen */
+        margin: 20px;
+        float: left;
+        /* float: hierdoor gaan de elementen naar links en als er nog ruimte aan de
+        rechterkant over is, vloeit de inhoud, die hiernaar komt er in.
+        Kijk eventurrl wat er gebeurt als je float:left weghaald!! */
+        border-radius: 15px;
+        box-sizing: border-box;}
+    .inhoud__block--weinig {
+        width: 260px;
+        /* dit is voor de sections met weinig inhoud: die kunnen smaller.
+           Ze hebben in de amrk-up een class weinig meegekregen.
+           Kijk goed naar de uitwerking en geef ze een breedte, zodat ze met 4 secties naast elkaar kunnen */
+        padding: 20px;}
+    .inhoud__block--middle {
+        Width: 300px;
+        padding: 10px;
+        float: left;
+        margin-bottom: 40px;}
+    .inhoud__block--groot {
+        width: 320px;
+        padding: 20px;
+        float: left;}
+    .inhoud__block--title{
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+        line-height: 21px;}
+    .inhoud__block--tekst{
+        margin: 0;
+        font-size: 16px;
+        line-height: 15px;}
+
+.footer {
+    clear: left;
+    /*als dit acterwege blijft vloeit de footer ook nog langs de floatende elementen.
+    Deze 'hack' zorgte er dus voor dat de footer 'onder' de sectins blijft */
+    background-color: rgba(0, 0, 0, .7);
+    color: white;
+    margin: auto 100px;
+}
+.validatie {
+    margin-left: 70px;}
+    .validatie--img {
+        height: 1em;
+        width: auto;
+        border: 0;
+        margin: 0 .3em;}
